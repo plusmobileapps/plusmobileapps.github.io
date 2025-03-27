@@ -1,0 +1,17 @@
+site_name: Plus Mobile Apps
+site_description: Mobile apps company and tech blog
+site_url: https://plusmobileapps.com
+
+theme:
+  name: material
+  features: 
+    - navigation.tabs
+
+plugins:
+  - search
+  - blog
+
+nav:
+  - Home: index.md
+  - Blog: 
+    - blog/index.md
