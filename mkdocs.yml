@@ -33,6 +33,12 @@ plugins:
   - search
   - blog
 
+markdown_extensions:
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
 nav:
   - Home: index.md
   - Blog: 
