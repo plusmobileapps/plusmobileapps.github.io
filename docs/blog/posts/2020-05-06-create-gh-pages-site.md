@@ -6,7 +6,7 @@ date:
 
 # Create a Website with Github Pages
 
-![](/assets/images/material-mkdocs.png)
+![](../../assets/images/material-mkdocs.png)
 
 If you have a project, blog, or documentation that you need to have hosted in a site, [Github Pages](https://pages.github.com/) can be a great way to host your site for free straight from the repository. 
 
@@ -50,16 +50,16 @@ After sourcing your bash profile with the new alias, you should now be able to j
 
 The easiest way to get running is to fork the repository from Github and then clone that repository to your machine. 
 
-![Fork Github Repository](/assets/images/fork-repository.png)
+![Fork Github Repository](../../assets/images/fork-repository.png)
 
 Now in order to access your website in the public space in the end, we must rename the repository to `<username>.github.io` in order to work with the default domain given for free from Github Pages. Go to the settings of your repository, and rename the repo with your username replaced. 
 
-![Rename Forked Repository](/assets/images/rename-repo.png)
+![Rename Forked Repository](../../assets/images/rename-repo.png)
 
 Now we can clone the repository to our local machine with git. 
 
 !!! note
-    I am using the the SSH urls when cloning, you could just as easily use the https urls. If you have not set that up in git and wish to learn how, checkout [how to use SSH](/../dev-basics/ssh).
+    I am using the the SSH urls when cloning, you could just as easily use the https urls. If you have not set that up in git and wish to learn how, checkout [how to use SSH](/2018-07-20-ssh.md).
 
     `git clone https://github.com/squidfunk/mkdocs-material.git`
 
@@ -93,7 +93,7 @@ python -m mkdocs serve
 
 Open up your browser and navigate to `http://127.0.0.1:8000/` and you should now see the landing page for your Material MkDocs site. 
 
-![Material MkDocs](/assets/images/mkdocs-home.png)
+![Material MkDocs](../../assets/images/mkdocs-home.png)
 
 !!! note
     If you run into an error when running the command above with the following
@@ -123,11 +123,11 @@ python -m mkdocs gh-deploy
 
 Be sure that the repository settings is configured for Github Pages to be built off of the `gh-pages` branch as this is the default branch MkDocs will deploy to. 
 
-![](/assets/images/gh-pages-branch.png)
+![](../../assets/images/gh-pages-branch.png)
 
 If you are creating a personal Github Pages website for your username and do not see the option to switch the branch. This is because it must be built off of master which is an easy fix to deploy to. 
 
-![](/assets/images/personal-gh-pages.png)
+![](../../assets/images/personal-gh-pages.png)
 
 From the master branch, checkout a new branch and call it `develop` then push it to Github. Now you can configure MkDocs to deploy to the `master` branch instead of the default `gh-pages` branch. 
 
@@ -148,7 +148,7 @@ python -m mkdocs gh-deploy -r myfork
 
 The easiest way to figure out your url for you enterprise Github Pages site is to go to the repository's settings, and go down to the Github Pages section to see where it was published. 
 
-![Enterprise Github Pages Name](/assets/images/enterprise-ghpages-name.png)
+![Enterprise Github Pages Name](../../assets/images/enterprise-ghpages-name.png)
 
 ## Configure Custom Domain for Github Pages
 
@@ -158,9 +158,9 @@ The easiest way to figure out your url for you enterprise Github Pages site is t
 
 [Deploying MkDocs CNAME](https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains) - adding a [CNAME file](https://github.com/plusmobileapps/plusmobileapps.github.io/blob/develop/docs/CNAME) in the docs folder that contains the domain name that was used in the custom domain field in the repository settings will allow the `mkdocs gh-deploy` command from wiping out the CNAME file in the master branch. 
 
-![](/assets/images/gh-custom-domain.png)
+![](../../assets/images/gh-custom-domain.png)
 
 
 If you happen to get the following warning when updating the custom domain in your Github repository settings. I found out there was another repository on my account that had the custom domain already setup and deleting that custom domain on the other repository fixed my issue. 
 
-![](/assets/images/github-pages-error.png)
+![](../../assets/images/github-pages-error.png)

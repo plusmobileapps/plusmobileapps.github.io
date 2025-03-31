@@ -6,7 +6,7 @@ date:
 
 # Build What You Need, Not What Yout Want - Avoiding Analysis Paralysis
 
-![](/assets/images/analysis-paralysis.jpg)
+![](../../assets/images/analysis-paralysis.jpg)
 
 <!-- more -->
 

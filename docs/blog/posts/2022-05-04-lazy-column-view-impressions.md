@@ -10,7 +10,7 @@ date:
 
 If you have ever shipped a feature with a scrolling list, a product manager will usually ask you to track when an item in that list is viewed by the user. With Jetpack Compose being somewhat new, I was curious how to solve this problem with respect to a `LazyColumn` so let's learn how to know the second eyeballs see items as they scroll into view!
 
-![](/assets/images/spongebob-eyes.gif)
+![](../../assets/images/spongebob-eyes.gif)
 
 <!-- more -->
 
@@ -112,7 +112,7 @@ class MainViewModel : ViewModel() {
 
 ## Final Outcome 
 
-![](/assets/images/lazy-column-view.gif)
+![](../../assets/images/lazy-column-view.gif)
 
 That's it! If you want to look at complete source code for this sample, it is linked in the section below. Hope this helps and don't be afraid to leave a comment!
 

@@ -6,7 +6,7 @@ date:
 
 # My Mac Developing Environment
 
-![](/assets/images/my-mac-environment.png)
+![](../../assets/images/my-mac-environment.png)
 
 A list of all the different programs, packages, and tips for how I configure my Mac for development. 
 
@@ -140,9 +140,9 @@ Then whenever you take a screen shot, you will see it show up in your bottom too
 
 Just a reminder to take a screen shot of the whole screen, you can use the following command. 
 
-![full screen capture](/assets/images/screen-cap-whole-screen.png)
+![full screen capture](../../assets/images/screen-cap-whole-screen.png)
 
 Then to take a screen shot of just a portion of the screen you can use: 
 
-![portion of the screen capture](/assets/images/screen-cap-part-screen.png)
+![portion of the screen capture](../../assets/images/screen-cap-part-screen.png)
 

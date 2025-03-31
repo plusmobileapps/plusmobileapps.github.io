@@ -17,11 +17,11 @@ One day at my day job, I noticed that there were a couple of services we used th
 1. First download [IntelliJ IDEA CE](https://www.jetbrains.com/idea/download/download-thanks.html?&code=IIC) and install for your development platform. 
 2. Once installed, click configure -> plugins. Then search and install the Ktor plugin. 
 
-![](/assets/images/intellij-extension.png)
+![](../../assets/images/intellij-extension.png)
 
 3. Create a new project and select Ktor in the side bar. For the sake of this tutorial, we are going to use the GSON library for JSON serialization. But this is swappable with other JSON serializers of your choosing. 
 
-![](/assets/images/create-ktor-project.png)
+![](../../assets/images/create-ktor-project.png)
 
 After giving your project a name and finishing the setup, you should be able to run the project with the following command and open up your browser to [http://0.0.0.0:8080](http://0.0.0.0:8080). 
 
@@ -29,25 +29,25 @@ After giving your project a name and finishing the setup, you should be able to 
 gradle run
 ```
 
-![](/assets/images/hello-world-ktor.png)
+![](../../assets/images/hello-world-ktor.png)
 
 ### Create a Slack Bot App 
 
 Go to [Slack's API website](https://api.slack.com/apps) and create a new app. Give a name for your bot and the workspace that this bot will have access to. 
 
-![](/assets/images/slack-app-create.png)
+![](../../assets/images/slack-app-create.png)
 
 Under OAuth and Permissions, we need to give our bot the permission to write to our Slack channels so go ahead and add the following permission. 
 
-![](/assets/images/slack-bot-permissions.png)
+![](../../assets/images/slack-bot-permissions.png)
 
 At the top of this page, you should now be able to install this bot to your workspace. 
 
-![](/assets/images/install-slack-bot.png)
+![](../../assets/images/install-slack-bot.png)
 
 Now that you have installed the bot to the workspace, it should land you back on OAuth and Permissions page with a token that we will use later to authenticate with our Slack instance to post messages. This key should be kept private and not checked into any repository which we will discuss in a bit how to keep this secret. 
 
-![](/assets/images/slack-bot-token.png)
+![](../../assets/images/slack-bot-token.png)
 
 ### Add Java Slack SDK
 
@@ -72,7 +72,7 @@ Now sync gradle and the Slack Java SDK should be accessible. If you have any tro
 
 Before we can post any messages, lets now add the Slack bot token to our project as an environment variable since you should never be checking in api tokens directly to your repository. Click on the gradle configuration in the top toolbar, and edit configurations. Then click on the right icon of environment variables and click the plus button to add an environment variable. 
 
-![](/assets/images/slack-token-env-variable.png)
+![](../../assets/images/slack-token-env-variable.png)
 
 Our bot doesn't have permissions to join channels, so to prevent the `not_in_channel` error add the bot by @ it in the slack channel you want to post a message to. `@Plus Mobile Apps Slack Bot` in the `#general` channel. 
 
@@ -104,7 +104,7 @@ fun Application.module(testing: Boolean = false) {
 
 Now run the gradle configuration in IntelliJ and go `http://0.0.0.0:8080`. This route should now trigger a message being sent to the general channel. 
 
-![](/assets/images/simple-slackbot-message.png)
+![](../../assets/images/simple-slackbot-message.png)
 
 ## Deploy to Heroku
 
@@ -117,7 +117,7 @@ heroku git:remote -a ktor-slack-bot
 
 Now go into the settings of your Heroku app and we will add the Slack token from earlier. 
 
-![](/assets/images/heroku-env-variable.png)
+![](../../assets/images/heroku-env-variable.png)
 
 Heroku itself is not always going to run on port 8080 and actually passes this port number as an environment variable, so the application needs to be tweaked to take a `PORT` variable. 
 
@@ -220,7 +220,7 @@ All of the changes needed to deploy can be found in this [commit](https://github
 
 The application until this point is pretty simple, but now that the application is deployed there is a URL you can use to register for web hooks. For this example, we will use Github web hooks from this repository which you can register in the settings section of the repository -> web hooks.
 
-![](/assets/images/slackbot-add-webhook.png)
+![](../../assets/images/slackbot-add-webhook.png)
 
 To test what data this endpoint will be receiving, I use a service called [Beeceptor](https://beeceptor.com) which will set up an endpoint of your choice and will display the JSON that is sent from the webhook. After creating an endpoint on Beeceptor, register the url from Beeceptor as a webhook for the repository in order to see what JSON is sent in the payload. When you are first setting up a Github webhook, there are two requests that will be sent. 
 
@@ -253,17 +253,17 @@ fun Route.githubWebhookRoute() {
 
 To test locally, run the application and use your tool of choice to send a post request. I use Postman and send the post request to the application's local host with the JSON payload saved earlier from the push event. 
 
-![](/assets/images/postman-slackbot.png)
+![](../../assets/images/postman-slackbot.png)
 
 After everything is working locally, go ahead and deploy to Heroku. The end result of the message posted to Slack whenever a commit is pushed to the repository!
 
-![](/assets/images/final-slackbot-message.png)
+![](../../assets/images/final-slackbot-message.png)
 
 ## Prevent blocking thread
 
 Before we are done, if you look closely at the posting of the message there is a warning from the IDE that there is an inappropriate blocking method call. Since Ktor uses coroutines, the easiest solution to fix this is to simply move this call off of the original thread using `withContext()` and indicating which Dispatcher this should be run on.  
 
-![](/assets/images/blocking-thread.png)
+![](../../assets/images/blocking-thread.png)
 
 ```kotlin
 fun Route.githubWebhookRoute() {

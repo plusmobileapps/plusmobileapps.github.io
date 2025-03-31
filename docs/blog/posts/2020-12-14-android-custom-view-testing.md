@@ -23,7 +23,7 @@ If you don't plan on splitting up your custom components into a separate module,
 
 You can create a new module under `File -> New -> New Module...` and select Android library. Give the module a name and select finish. 
 
-![](/assets/images/create-new-android-library.png)
+![](../../assets/images/create-new-android-library.png)
 
 Then in the `app/build.gradle`, you will need to add this module to the dependencies so that custom view can be accessed from the Android app module. 
 
@@ -40,7 +40,7 @@ Everything else should have been auto generated when you created the library mod
 
 The component that will be built is a material card which has a lock button, text description, and a background ripple that is only active when the card is unlocked. 
 
-![](/assets/images/android_custom_view.gif)
+![](../../assets/images/android_custom_view.gif)
 
 I am not going to go into great detail of how this custom view itself was built to focus more on the testing side of the view. The official Android documentation has a great tutorial for [how to create a custom Android view](https://developer.android.com/training/custom-views/create-view) if you want to learn more about how to do that. Otherwise you can see all the code needed for creating this custom view in this [commit](https://github.com/plusmobileapps/test-custom-android-view/commit/0bce65404694984c247553b299912554306fdbf0). Only useful things to know for testing later is the name of the view, `MyCustomView`, and the xml attributes as we will be injecting them into the constructor of the Robolectric tests. 
 
@@ -78,11 +78,11 @@ dependencies {
 
 The quickest way to create a test is opening up `MyCustomView`, pressing `ctrl + enter` to bring up the `Generate` menu and select `Test..`. 
 
-![](/assets/images/generate-test.png)
+![](../../assets/images/generate-test.png)
 
 Android studio should auto generate the name, click on finish and make sure to select the `test` folder and not the `androidTest` folder since Robolectric can run locally on your machine. 
 
-![](/assets/images/generate-test-name.png)
+![](../../assets/images/generate-test-name.png)
 
 Now in our test class, we need to annotate our test with the Robolectric test runner and can create a setup function to instantiate the view with the context of an `Activity` from Robolectric. 
 

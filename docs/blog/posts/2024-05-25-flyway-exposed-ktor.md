@@ -13,7 +13,7 @@ categories:
 
 # Ktor Database Beginners Guide
 
-![](/assets/images/flyway-title.png)
+![](../../assets/images/flyway-title.png)
 
 
 I have been using [Ktor](https://ktor.io/), [PostgreSQL](https://www.postgresql.org/), and [Jetbrains Exposed](https://github.com/JetBrains/Exposed) for a backend in a hobby project. I was adding a new feature that required making changes to the database, so after a quick Google search found a [Stackoverflow answer](https://stackoverflow.com/a/63068104/7900721) recommending using Flyway to manage the database migrations. I was looking for a more complete solution to this answer, so ended up creating a [sample project](https://github.com/plusmobileapps/ktor-postgres-flyway-sample) to share my learnings in migrating a Postgres database with Flyway in a Ktor project.  

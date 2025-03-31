@@ -8,7 +8,7 @@ categories:
 
 # Android Location Basics
 
-![](/assets/images/android-location.jpg)
+![](../../assets/images/android-location.jpg)
 
 Sample app that will demonstrate the basics in retrieving a user's location and requesting permission at runtime on Android.
 

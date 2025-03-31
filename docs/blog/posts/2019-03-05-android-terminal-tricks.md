@@ -6,7 +6,7 @@ date:
 
 # Android Bash Profile and Terminal Tricks
 
-![](/assets/images/android-adb.jpg)
+![](../../assets/images/android-adb.jpg)
 
 <!-- more -->
 

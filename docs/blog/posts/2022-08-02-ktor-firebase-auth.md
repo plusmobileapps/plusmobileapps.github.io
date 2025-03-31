@@ -9,7 +9,7 @@ categories:
 
 # How to use Firebase Authentication with Ktor 2.0
 
-![](/assets/images/ktor-firebase-authentication.png)
+![](../../assets/images/ktor-firebase-authentication.png)
 
 With the release of Ktor 2.0, one of the migrations I had to do was for Firebase Authentication which I first learned about how to use with Ktor 1.6 from this [medium article](https://levelup.gitconnected.com/how-to-integrate-firebase-authentication-with-ktors-auth-feature-dc2c3893a0cc) last year. Learn how to setup Firebase Authentication with Ktor 2.0 and how to test it. 
 
@@ -21,9 +21,9 @@ With the release of Ktor 2.0, one of the migrations I had to do was for Firebase
 
 Before downloading the starter project, follow these [instructions](https://cloud.google.com/firestore/docs/client/get-firebase) to create a new firebase project and enable authentication. Then click on the settings button in the side bar -> project settings -> service accounts tab -> generate a new private key which should then download a JSON file to your machine. 
 
-![](/assets/images/firebase-console-project-settings.png)
+![](../../assets/images/firebase-console-project-settings.png)
 
-![](/assets/images/firebase-console-service-account.png)
+![](../../assets/images/firebase-console-service-account.png)
 
 ### Download and Configure Project
 

@@ -8,7 +8,7 @@ date:
 
 One aspect of a programmer's work that I think can get overlooked is the actual physical workspace where he or she works. Over the years I have invested a lot of time and effort into creating a home office that is ergonomic and promotes a workflow that works for me. By no means am I trying to tell everyone that...
 
-![This is the way](/assets/images/this-is-the-way.gif)
+![This is the way](../../assets/images/this-is-the-way.gif)
 
 <!-- more -->
 
