@@ -35,6 +35,24 @@ theme:
 plugins:
   - search
   - blog
+  - redirects:
+      redirect_maps:
+        '2024/05/25/flyway-exposed-ktor.html' : 'blog/posts/2024-05-25-flyway-exposed-ktor.md'
+        '2022/08/02/ktor-firebase-auth.html' : 'blog/posts/2022-08-02-ktor-firebase-auth.md'
+        '2022/05/04/lazy-column-view-impressions.html' : 'blog/posts/2022-05-04-lazy-column-view-impressions.md'
+        '2022/01/06/save-state-flow.html' : 'blog/posts/2022-01-06-save-state-flow.md'
+        '2020/12/14/android-custom-view-testing.html' : 'blog/posts/2020-12-14-android-custom-view-testing.md'
+        '2020/10/09/ktor-slackbot-heroku.html' : 'blog/posts/2020-10-09-ktor-slackbot-heroku.md'
+        '2020/05/06/create-gh-pages-site.html' : 'blog/posts/2020-05-06-create-gh-pages-site.md'
+        '2020/03/02/physical-workspace.html' : 'blog/posts/2020-03-02-physical-workspace.md'
+        '2020/01/26/mac-dev-environment.html' : 'blog/posts/2020-01-26-mac-dev-environment.md'
+        '2020/01/20/markdown.html' : 'blog/posts/2020-01-20-markdown.md'
+        '2019/08/14/kotlin-or-java.html' : 'blog/posts/2019-08-14-kotlin-or-java.md'
+        '2019/05/26/analysis-paralysis.html' : 'blog/posts/2019-05-26-analysis-paralysis.md'
+        '2019/03/05/android-terminal-tricks.html' : 'blog/posts/2019-03-05-android-terminal-tricks.md'
+        '2018/09/26/android-location-basics.html' : 'blog/posts/2018-09-26-android-location-basics.md'
+        '2018/07/30/shell-scripts.html' : 'blog/posts/2018-07-30-shell-scripts.md'
+        '2018/07/20/ssh.html' : 'blog/posts/2018-07-20-ssh.md'
 
 markdown_extensions:
   - md_in_html
