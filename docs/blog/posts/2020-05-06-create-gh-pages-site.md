@@ -2,6 +2,9 @@
 title: Create a Website with Github Pages
 date:
   created: 2020-05-06
+
+categories:
+  - Productivity
 ---
 
 # Create a Website with Github Pages

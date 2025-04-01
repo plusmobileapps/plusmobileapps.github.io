@@ -4,6 +4,7 @@ date:
   created: 2020-12-14
 categories:
     - Android
+    - Testing
 ---
 
 # How to test a custom Android view with Robolectric

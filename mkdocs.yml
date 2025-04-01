@@ -7,6 +7,7 @@ theme:
   logo: assets/plus-logo.jpeg
   favicon: assets/plus-logo.jpeg
   features: 
+    - navigation.footer
     - navigation.tabs
     - content.code.copy
   custom_dir: overrides

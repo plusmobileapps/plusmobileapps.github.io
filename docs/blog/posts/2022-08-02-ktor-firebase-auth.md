@@ -5,6 +5,7 @@ date:
 categories:
     - Ktor
     - Backend
+    - Firebase
 ---
 
 # How to use Firebase Authentication with Ktor 2.0

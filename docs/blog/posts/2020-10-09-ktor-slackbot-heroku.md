@@ -2,6 +2,10 @@
 title: How to build a Slackbot with Kotlin
 date:
   created: 2020-10-09
+
+categories:
+    - Ktor
+    - Backend
 ---
 
 # How to build a Slackbot with Kotlin
