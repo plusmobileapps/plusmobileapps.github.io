@@ -2,6 +2,9 @@
 title: Physical Workspace
 date:
   created: 2020-03-02
+
+categories:
+  - Opinions
 ---
 
 # Physical Workspace

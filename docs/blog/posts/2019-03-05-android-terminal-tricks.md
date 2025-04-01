@@ -2,6 +2,10 @@
 title: Android Bash Profile and Terminal Tricks
 date:
   created: 2019-03-05
+
+categories:
+  - Android
+  - Bash
 ---
 
 # Android Bash Profile and Terminal Tricks

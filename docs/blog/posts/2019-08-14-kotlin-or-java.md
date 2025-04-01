@@ -2,6 +2,9 @@
 title: Should I Write an Android App in Kotlin or Java?
 date:
   created: 2019-08-14
+
+categories:
+  - Opinions
 ---
 
 # Should I Write an Android App in Kotlin or Java?

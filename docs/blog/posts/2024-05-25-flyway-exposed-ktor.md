@@ -9,6 +9,7 @@ description: >
 categories:
   - Backend
   - Ktor
+  - Database
 ---
 
 # Ktor Database Beginners Guide

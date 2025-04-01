@@ -5,6 +5,7 @@ date:
   created: 2022-01-06
 categories:
   - Android
+  - Coroutines
 ---
 
 # Surviving Android Process Death With SavedStateFlow
