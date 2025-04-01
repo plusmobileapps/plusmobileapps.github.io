@@ -2,6 +2,7 @@
 title: How to use Firebase Authentication with Ktor 2.0
 date:
   created: 2022-08-02
+authors: [andrew]
 categories:
     - Ktor
     - Backend

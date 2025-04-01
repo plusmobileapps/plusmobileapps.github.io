@@ -3,6 +3,8 @@ title: My Mac Developing Environment
 date:
   created: 2020-01-26
 
+authors: [andrew]
+
 categories:
   - Productivity
 ---

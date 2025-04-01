@@ -2,6 +2,9 @@
 title: Shell Scripts
 date:
   created: 2018-07-30
+
+authors: [andrew]
+
 categories:
   - Productivity
   - Bash

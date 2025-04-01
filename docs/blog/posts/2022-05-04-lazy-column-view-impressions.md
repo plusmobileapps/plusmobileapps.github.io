@@ -4,6 +4,8 @@ title: How to track view impressions in a Jetpack Compose Lazy Column
 date:
   created: 2022-05-04
 
+authors: [andrew]
+
 categories:
     - Android
     - Jetpack Compose

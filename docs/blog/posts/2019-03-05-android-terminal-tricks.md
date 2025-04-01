@@ -3,6 +3,8 @@ title: Android Bash Profile and Terminal Tricks
 date:
   created: 2019-03-05
 
+authors: [andrew]
+
 categories:
   - Android
   - Bash

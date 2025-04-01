@@ -3,6 +3,9 @@ title: Surviving Android Process Death With SavedStateFlow
 
 date:
   created: 2022-01-06
+
+authors: [andrew]
+
 categories:
   - Android
   - Coroutines

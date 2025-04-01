@@ -3,6 +3,8 @@ title: Build What You Need, Not What Yout Want - Avoiding Analysis Paralysis
 date:
   created: 2019-05-26
 
+authors: [andrew]
+
 categories:
   - Opinions
 ---

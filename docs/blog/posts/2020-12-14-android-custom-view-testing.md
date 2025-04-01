@@ -2,6 +2,9 @@
 title: How to test a custom Android view with Robolectric
 date:
   created: 2020-12-14
+
+authors: [andrew]
+
 categories:
     - Android
     - Testing

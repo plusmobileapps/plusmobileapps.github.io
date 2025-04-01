@@ -2,6 +2,9 @@
 title: Android Location Basics
 date:
   created: 2018-09-26
+
+authors: [andrew]
+
 categories:
     - Android
 ---
