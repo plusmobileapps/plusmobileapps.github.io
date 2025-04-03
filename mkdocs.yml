@@ -55,6 +55,16 @@ plugins:
         '2018/07/30/shell-scripts.html' : 'blog/posts/2018-07-30-shell-scripts.md'
         '2018/07/20/ssh.html' : 'blog/posts/2018-07-20-ssh.md'
 
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/plusmobileapps
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/plusmobileapps
+
 markdown_extensions:
   - md_in_html
   - pymdownx.highlight:
