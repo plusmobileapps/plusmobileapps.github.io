@@ -64,6 +64,8 @@ extra:
       link: https://github.com/plusmobileapps
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/plusmobileapps
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/andrew-steinmetz-6a8aaaa2/
 
 markdown_extensions:
   - md_in_html
