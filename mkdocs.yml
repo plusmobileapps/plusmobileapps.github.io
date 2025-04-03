@@ -58,7 +58,7 @@ plugins:
 extra:
   analytics:
     provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+    property: G-FDVQ64BD8G
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/plusmobileapps
