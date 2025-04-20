@@ -18,7 +18,7 @@ I recently started using [Kotlin inject anvil](https://github.com/amzn/kotlin-in
 
 ## The Problem
 
-
+I use a library called [Decompose](https://arkivanov.github.io/Decompose/) to manage navigation in my KMP projects which heavily relies on assisted injection to inject a `ComponentContext` into each business logic component (BloC). For this example, consider a simple interface for `MoviesBloc` and real implementation of one.
 
 ```kotlin
 interface MoviesBloc {
@@ -38,7 +38,7 @@ class RealMoviesBloc(
 }
 ```
 
-To create a `MoviesBloc` elsewhere, a lambda could be injected that takes the assisted parameter as an argument `(ComponentContext) -> MoviesBloc`. Coming from a background using [dagger](https://github.com/google/dagger) and [anvil](https://github.com/square/anvil), I had become accustomed to a pattern of creating factory interfaces that would create assisted injected dependencies.
+Due to a recent [contribution](https://github.com/amzn/kotlin-inject-anvil/pull/104) I made to kotlin-inject-anvil, to create a `MoviesBloc` elsewhere a lambda could be injected that takes the assisted parameter as an argument `(ComponentContext) -> MoviesBloc`. Coming from a background using [dagger](https://github.com/google/dagger) and [anvil](https://github.com/square/anvil), I had become accustomed to a pattern of creating factory interfaces that would create assisted injected dependencies.
 
 ```kotlin
 interface MoviesBloc {
@@ -66,7 +66,7 @@ class RealMoviesBlocFactory(
 }
 ```
 
-Finally able to use this factory interface by injecting into other BloCs. 
+Finally, this factory interface can be injected into other classes to create instances of the `MoviesBloc`.
 
 ```kotlin
 @Inject
@@ -88,14 +88,10 @@ The `RealMoviesBlocFactory` seemed like unnecessary boiler plate code just to bi
 
 ## Assisted Factory Extension
 
-Kotlin inject anvil was designed to be flexible by allowing one to [extend the framework](https://ralf-wondratschek.com/presentation/extending-kotlin-inject-nyc.html) to generate components in situations just like this. Which is how the [kotlin-inject-anvil-extensions](https://github.com/plusmobileapps/kotlin-inject-anvil-extensions) library was created. 
+Kotlin inject anvil was designed to be flexible by allowing one to [extend the framework](https://ralf-wondratschek.com/presentation/extending-kotlin-inject-nyc.html) to generate components in situations just like this. Which is how the [kotlin-inject-anvil-extensions](https://github.com/plusmobileapps/kotlin-inject-anvil-extensions) library was created. On top of the usual [setup of kotlin-inject-anvil](https://github.com/amzn/kotlin-inject-anvil?tab=readme-ov-file#setup), the extensions can be setup in a similar fashion with instructions found in the [documentation](https://plusmobileapps.com/kotlin-inject-anvil-extensions/assisted-factory/#setup).
 
 
 The assisted factory extension has a very simple API with the annotation `@ContributesAssistedFactory`. This annotation requires two parameters, the anvil scope and the assisted factory interface to bind.
-
-!!! warning 
-
-    The `@Assisted` parameters order of the real implementation constructor must be the same order as your assisted factory interface. If two of the same type are used, these will be mixed up when generating the default factory implementation with the extension.
 
 
 ```kotlin
@@ -129,6 +125,44 @@ class RealRootBloc(
     moviesBlocFactory.create(context)
 }
 ```
+
+!!! warning 
+
+    The `@Assisted` parameters order of the real implementation constructor must be the same order as your assisted factory interface. If two of the same type are used, these will be mixed up when generating the default factory implementation with the extension if not passed in the exact same order. Consider the following example:
+
+    ```kotlin
+    interface FooFactory {
+      fun create(id: String, config: String): 
+    }
+    ```
+
+!!! success 
+
+    ```kotlin
+    @Inject
+    @ContributesAssistedFactory(
+      scope = AppScope::class,
+      assistedFactory = FooFactory::class,
+    )
+    class RealFoo(
+      @Assisted private val id: String,
+      @Assisted private val config: String,
+    ): Foo
+    ```
+
+!!! failure 
+
+    ```kotlin
+    @Inject
+    @ContributesAssistedFactory(
+      scope = AppScope::class,
+      assistedFactory = FooFactory::class,
+    )
+    class RealFoo(
+      @Assisted private val config: String,
+      @Assisted private val id: String,
+    ): Foo
+    ```
 
 ## Resources
 
