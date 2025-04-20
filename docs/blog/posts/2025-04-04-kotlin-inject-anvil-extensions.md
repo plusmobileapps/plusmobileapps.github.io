@@ -12,7 +12,7 @@ categories:
   ![Image title](../../assets/images/extending-kotlin-inject.jpg){ width="400" }
 </figure>
 
-I recently started using [Kotlin inject anvil](https://github.com/amzn/kotlin-inject-anvil) in my kotlin multiplatform (KMP) projects for dependency injection. However when using [assisted injection](https://github.com/evant/kotlin-inject?tab=readme-ov-file#function-support--assisted-injection) I noticed myself writing boilerplate code to bind assisted factory method interfaces. In the process of trying to not write all this boiler plate code, I ended up writing a library that extends kotlin inject anvil to generate the code necessary to bind the assisted factory interface. Learn how to use this extension and how to write your own extension.
+I recently started using [Kotlin inject anvil](https://github.com/amzn/kotlin-inject-anvil) in my kotlin multiplatform (KMP) projects for dependency injection. However when using [assisted injection](https://github.com/evant/kotlin-inject?tab=readme-ov-file#function-support--assisted-injection) I noticed myself writing boilerplate code to bind assisted factory method interfaces. In the process of trying to not write all this boiler plate code, I ended up writing a library that extends kotlin inject anvil to generate the code necessary to bind the assisted factory interface. Learn how to use this extension to bind assisted factory method interfaces. 
 
 <!-- more -->
 
