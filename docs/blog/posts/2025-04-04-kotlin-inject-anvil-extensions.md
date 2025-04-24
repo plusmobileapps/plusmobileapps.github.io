@@ -132,7 +132,7 @@ class RealRootBloc(
 
     ```kotlin
     interface FooFactory {
-      fun create(id: String, config: String): 
+      fun create(id: String, config: String): Foo
     }
     ```
 
