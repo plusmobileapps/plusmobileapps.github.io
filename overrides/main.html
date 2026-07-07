@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block footer %}
+  <section class="newsletter">
+    <div class="newsletter__inner">
+      <form class="newsletter__form" id="newsletter-form">
+        <label class="newsletter__label" for="newsletter-email">Get new posts by email</label>
+        <div class="newsletter__row">
+          <input
+            class="newsletter__input"
+            id="newsletter-email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button class="newsletter__submit" type="submit">Subscribe</button>
+        </div>
+        <p class="newsletter__message" id="newsletter-message" role="status"></p>
+      </form>
+    </div>
+  </section>
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'javascripts/newsletter.js' | url }}"></script>
+{% endblock %}
