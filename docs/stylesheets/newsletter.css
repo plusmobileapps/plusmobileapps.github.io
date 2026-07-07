@@ -1,5 +1,0 @@
-.newsletter {
-  border-top: .05rem solid var(--md-default-fg-color--lightest);
-  padding: 1.5rem .8rem;
-}
-.newsletter__inner { max-width: 40rem; margin: 0 auto; }
