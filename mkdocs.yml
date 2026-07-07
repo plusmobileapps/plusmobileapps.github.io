@@ -55,9 +55,6 @@ plugins:
         '2018/07/30/shell-scripts.html' : 'blog/posts/2018-07-30-shell-scripts.md'
         '2018/07/20/ssh.html' : 'blog/posts/2018-07-20-ssh.md'
 
-extra_css:
-  - stylesheets/newsletter.css
-
 extra:
   analytics:
     provider: google
