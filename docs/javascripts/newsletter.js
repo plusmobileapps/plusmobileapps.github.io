@@ -1,8 +1,8 @@
 (function () {
   // Kit (formerly ConvertKit) public API key — safe to expose client-side,
   // it only grants access to the forms/subscribe endpoint.
-  var KIT_API_KEY = "REPLACE_WITH_KIT_PUBLIC_API_KEY";
-  var KIT_FORM_ID = "REPLACE_WITH_KIT_FORM_ID";
+  var KIT_API_KEY = "oUdAYSfgFJFKJNPbMQDVQw";
+  var KIT_FORM_ID = "9585142";
 
   function init() {
     var form = document.getElementById("newsletter-form");
